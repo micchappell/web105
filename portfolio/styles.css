@@ -1,0 +1,237 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Roboto Mono', monospace
+	
+ */
+
+:root{
+	--dark-primary-color: rgb(47, 123, 211); 
+	--default-primary-color: rgb(143, 54, 244); 
+	--light-primary-color: rgb(239, 205, 255);
+	--text-primary-color: #FFFFFF;
+	--accent-color: #9E9E9E;
+	--primary-text-color: #212121; 
+	--secondary-text-color: #757575;
+	--divider-color: #BDBDBD;
+	--header-font: 'Roboto Slab', serif;
+	--text-font: 'Robot', sans-serif;
+	--caption-font: 'Roboto Mono', monospace;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.15;
+	font-size: 1.1em;
+	background-color: var(--divider-color);
+}
+
+header{
+    background-color: var(--dark-primary-color);
+	color: var(--text-primary-color);	
+	text-align: center;
+	width: 100%;
+	overflow: auto;
+}
+
+#header{
+	font-family: var(--header-font);
+	font-size: 2em;
+	font-weight: normal;
+}
+nav ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+	background-color: var(--primary-text-color);
+	overflow: hidden;
+	width: 100%;
+}
+
+nav ul li{
+	float: left;
+	border-right: 1px solid var(--divider-color);
+}
+
+nav ul li:last-child{
+	border-right: none;
+}
+
+nav ul li a{
+	text-decoration: none;
+	font-family: var(--text-font);
+	font-weight: bolder;
+	color: var(--text-primary-color);
+	display: block;
+	padding: 20px;
+}
+
+nav ul li a:hover{
+	background-color: var(--divider-color);
+	color: var(--primary-text-color);
+}
+
+h1 {
+	font-family: var(--header-font);
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+div.gallery{
+    width: 31%;
+    float: left;
+    margin: 10px;
+    border: 1px solid var(--divider-color);
+}
+div.gallery:hover{
+    opacity: .65;
+}
+div.gallery img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+div.desc{
+    padding: 20px;
+    text-align: center;
+    color: var(--primary-text-color);
+    background-color: var(--divider-color);
+}
+
+div.image{
+    width: 90%;
+    float: left;
+    margin: 10px;
+    border: 1px solid var(--divider-color);
+}
+div.image:hover{
+    opacity: .65;
+}
+div.image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container{
+	width: 80%;
+	max-width: 1000px;
+	min-width: 350px;
+	margin: auto;
+	overflow: auto;
+	background-color: var(--text-primary-color);
+}
+
+.video{
+	float: left;
+	width: 50%;
+	padding: 20px 20px 0px;
+}
+
+.full{
+	padding: 20px;
+	float: left;
+	width: 100%;
+}
+
+.two-thirds{
+	width: 66.7%;
+	padding: 20px;
+}
+
+.half{
+	width: 50%;
+	padding: 0px 20px 20px;
+}
+
+.third{
+	width: 33.3%;
+	padding: 20px;
+}
+
+.quarter{
+	width: 25%;
+	padding: 20px;
+}
+
+.left{
+	float: left;
+}
+
+.right{
+	float: right;
+}
+
+footer{
+    background-color: var(--primary-text-color);
+	color: var(--text-primary-color);	
+	text-align: center;
+	width: 100%;
+	overflow: auto;
+}
+
+#footer{
+	font-family: var(--header-font);
+	font-size: 1em;
+	font-weight: normal;
+}
