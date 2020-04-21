@@ -1,0 +1,325 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ----------- fonts for index page -------------
+
+Paste into the <head> of the hmtl page:
+
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Roboto:wght@900&family=Source+Serif+Pro&display=swap" rel="stylesheet"> 
+
+*/
+
+
+ /* -------- layout --------- */
+
+:root{
+	--dark-primary-color: #1b1b1b; 
+	--default-primary-color: #424242; 
+	--light-primary-color: #6d6d6d;
+    --text-primary-color: #FFFFFF;
+    
+    --dark-secondary-color: #9ea7aa;
+    --default-secondary-color: #cfd8dc;
+    --light-secondary-color: #ffffff;
+    --text-secondary-color: #000000;
+
+    --dark-highlight-color: #6a0080;
+    --default-highlight-color: #9c27b0;
+    --light-highlight-color: #d05ce3;
+
+    --dark-sidebar-color: #c8b900;
+    --default-sidebar-color: #ffeb3b;
+    --light-sidebar-color: #ffff72;
+    
+	--header-font: 'Roboto', sans-serif;
+	--text-font: 'Source Serif Pro', serif;
+    --caption-font: 'Courier Prime', monospace;
+}
+
+/* border-box sizing includes padding and borders in an element's
+total width and height: https://www.w3schools.com/css/css3_box-sizing.asp */
+
+* {
+	box-sizing: border-box;
+}
+
+body{
+	background-color: var(--default-secondary-color);
+}
+
+body.gradient{
+	background: linear-gradient(0deg, rgba(133,133,133,1) 0%, rgba(201,201,201,1) 100%); 
+}
+
+header{
+    background-color: var(--dark-primary-color);
+	color: var(--text-primary-color);	
+    text-align: center;
+    width: 80%;
+	max-width: 1000px;
+    min-width: 350px;
+    padding: 20px;
+    margin: auto;
+    overflow: auto;
+}
+
+footer{
+    background-color: var(--dark-primary-color);
+	color: var(--text-primary-color);	
+	text-align: center;
+    width: 80%;
+    max-width: 1000px;
+    min-width: 350px;
+    padding: 10px;
+    margin: auto;
+    overflow: auto;
+}
+
+/* Horizontal Nav Bar -- reference https://www.w3schools.com/css/css_navbar_horizontal.asp */
+nav ul{
+    background-color: var(--default-highlight-color);
+	list-style-type: none;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    max-width: 1000px;
+    min-width: 350px;
+	overflow: auto;
+}
+
+nav ul li{
+	float: left;
+	border-right: 3px solid var(--dark-highlight-color);
+}
+
+nav ul li:last-child{
+	border-right: none;
+}
+
+nav ul li a{
+	text-decoration: none;
+	font-family: var(--header-font);
+	color: var(--text-primary-color);
+	display: block;
+	padding: 20px;
+}
+
+nav ul li a:hover{
+    background-color: var(--light-highlight-color);
+    
+}
+
+/* -------- Text Formatting ---------- */
+
+h1 {
+	font-family: var(--header-font);
+    font-size: 2em;
+    letter-spacing: .05em;
+    margin: 10px 20px;
+}
+
+h2{
+    font-family: var(--header-font);
+    font-size: 1.4em;
+    line-height: 2em;
+    letter-spacing: .05em;
+    margin: 10px 20px;
+}
+
+p{
+    font-family: var(--text-font);
+    color: var(--text-secondary-color);
+    font-size: 1.2em;
+    line-height: 1.4em;
+    margin: 0px 20px 20px;
+}
+
+/* ----------- layout styling ---------------*/
+
+/* column styling: https://www.w3schools.com/css/css3_multiple_columns.asp */
+.column{
+	column-count: 3;
+    column-gap: 30px;
+    column-rule-color: var(--light-primary-color);
+    column-rule-style: solid;
+    column-rule-width: 1px;
+}
+
+/* creates a rounded container with colored background and drop shadow */
+
+.callout{
+    color: var(--text-secondary-color);
+    background-color: var(--default-sidebar-color);
+	border-radius: 15px 50px 30px;
+	box-shadow: 5px 5px 0 0 var(--default-secondary-color);
+    padding: 20px 15px 5px;
+    margin: 0px 20px 20px;
+}
+
+.callout p{
+    font-family: var(--caption-font);
+    color: var(--text-secondary-color);
+    font-size: 1.2em;
+    line-height: 1.3em;
+
+}
+
+/* --------- div container sizes ----------*/
+
+/* Main container */
+.container{
+	width: 80%;
+	max-width: 1000px;
+    min-width: 350px;
+	margin: auto;
+	overflow: auto;
+	background-color: var(--text-primary-color);
+}
+
+/* floats, flexboxes, grids */
+.content{
+    flex: 67%;
+}
+
+.sidebar{
+    flex: 33%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Use clearfix in the containing div element to clear floats
+Example is here: https://www.w3schools.com/css/css_float_clear.asp
+*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* ---------- image gallery ------------*/
+
+div.gallery{
+    width: 31%;
+    float: left;
+    margin: 10px 0px 10px 20px;
+	border: 1px solid var(--default-secondary-color);
+}
+
+div.gallery:hover{
+	box-shadow: 5px 5px 0 0 var(--default-secondary-color);
+	transition: box-shadow 1s;
+}
+
+div.gallery img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+div.desc{
+    padding: 20px;
+    text-align: center;
+    color: var(--text-secondary-color);
+    background-color: var(--light-secondary-color);
+}
+
+div.image{
+    width: 90%;
+    float: left;
+    margin: 10px;
+}
+
+div.image:hover{
+    opacity: .65;
+}
+
+div.image img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ----------- media styles ------------- */
+
+/* Video styles assume you will always have an h selector (h1, h2, etc),
+so there is no margin-top for the video element. Without a header, add a
+corresponding margin-top. The video ID doesn't contain padding because
+it creates too much space between the h selector and the video element. */
+
+#video{
+    background-color: var(--light-primary-color);
+    color: var(--text-primary-color);
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    
+}
+
+video{
+    position: relative;
+    width: 80%;
+    height: auto;
+    margin-bottom: 40px;
+    border: solid 1px var(--dark-primary-color);
+}
+
+audio{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 500px;
+}
+
+iframe{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
